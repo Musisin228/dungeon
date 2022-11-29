@@ -1,0 +1,55 @@
+﻿<Page x:Class="dungeon.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:dungeon"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserPage">
+
+    <Grid>
+        <Grid>
+
+            <ListView Grid.Row ="1" x:Name="ServiceList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="2,3,-2,8" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="769" BorderBrush="LightBlue" BorderThickness="2" Background="{Binding Color}">
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width ="200"></ColumnDefinition>
+                                    <ColumnDefinition Width ="auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Text="{Binding Name}">
+                                </TextBlock>
+                                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Width="565">
+                                    <TextBlock Text="{Binding Cost}" Visibility="{Binding VisibilityCost}" TextDecorations="Strikethrough">
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding StrCostTime}">
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" Width="565">
+                                    <TextBlock Text="{Binding Xp}" Visibility="{Binding VisibilityCost}">
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3" >
+                                    <Button Background="White" x:Name="CreateBtn" Visibility="{Binding VisibilityBtn}" Click="CreateBtn_Click">Тренироваться</Button>
+
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+    </Grid>
+</Page>

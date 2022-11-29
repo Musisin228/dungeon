@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2a411fe37a1249f089ce302340bd7bd2" Name="Diagram1">
+        <EntityTypeShape EntityType="dungeonModel.Lvl_Up" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dungeonModel.Master" Width="1.5" PointX="2.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dungeonModel.Masters" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dungeonModel.role" Width="1.5" PointX="3.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="dungeonModel.SeansTicket" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dungeonModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dungeonModel.User" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dungeonModel.Client" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="dungeonModel.FK_SeansTicket_Masters" ManuallyRouted="false" />
+        <AssociationConnector Association="dungeonModel.FK_Client_role" ManuallyRouted="false" />
+        <AssociationConnector Association="dungeonModel.FK_SeansTicket_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="dungeonModel.FK_Client_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
